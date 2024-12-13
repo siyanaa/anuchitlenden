@@ -1,0 +1,31 @@
+/* Show background colors when printing */
+@media print {
+    @page {
+      size: auto;
+      margin: 0;
+    }
+
+    .print-window {
+      display: none;
+    }
+
+    .table-responsive  {
+      width: 100%;
+    }
+
+    .back-button {
+      display: none;
+    }
+
+    .to-hide {
+      display: none;
+    }
+}  
+
+body {
+    -webkit-print-color-adjust: exact !important;
+    background-color: #fff !important;
+    font-size: 12pt;
+    margin-top: 5px;
+    padding: 0;
+}

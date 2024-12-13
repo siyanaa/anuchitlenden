@@ -1,0 +1,362 @@
+/* ===========================================================================================
+
+      FORM STYLES
+
+=========================================================================================== */
+
+
+*{
+  font-family: "Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.modalll {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 75%;
+  top: 80px;
+  width: 300px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Style for the modal content */
+.modal-contenttt {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Close button style */
+.closeee {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.report-table-container {
+  height: 800px;
+  overflow: auto;
+}
+
+#releases-table thead {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 2;
+}
+
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 30px;
+  /* width: 100%; */
+  height: auto;
+  /* border: 2px solid rgb(218, 69, 69); */
+}
+
+.full--width {
+  width: 100%;
+}
+
+.transaction-details {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.registration-title {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form-items-container {
+  width: 100%;
+  /* border: 1px solid red; */
+  overflow-y:auto;
+  height: 600px;
+}
+
+.form-items-container>.tab {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 550px;
+  /* border: 1px solid rgb(153, 214, 153); */
+}
+
+.must {
+  color: red;
+}
+
+
+.form-items-container > .tab > .tab-title-container {
+  /* text-align: center; */
+  padding-bottom: 20px;
+}
+
+.form-items-container > .tab > .tab-title-container > .tab-title {
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-align: center;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: #000;
+  /* color: #424242 ; */
+}
+
+/* .form-items-container > .tab > .tab-title:hover {
+  color: white;
+} */
+
+input[type = text] {
+  padding: 5px;
+  width: 100%;
+  font-size: 17px;
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
+input[type = date] {
+  padding: 5px;
+  width: 100%;
+  font-size: 17px;
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
+input[type = number] {
+  padding: 5px;
+  width: 100%;
+  font-size: 17px;
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
+input[type = tel] {
+  padding: 5px;
+  width: 100%;
+  font-size: 17px;
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
+.note-editable { background-color: white !important; color: black !important; }
+
+/* input[type = text] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+} */
+
+label {
+  color: black;
+  font-weight: 600;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+select.invalid {
+  background-color: #ffdddd;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.537);
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+.form-list-container {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* justify-content: flex-start; */
+  width: auto;
+}
+
+/* Make circles that indicate the steps of the form: */
+.form-list {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 5px;
+}
+
+.step {
+  /* height: 15px; */
+  /* width: 15px; */
+  /* margin: 0 2px; */
+  /* background-color: #bbbbbb; */
+  /* border: none;   */
+  /* border-radius: 50%; */
+  display: inline-block;
+  opacity: 0.5;
+  padding: 8px;
+  cursor: pointer;
+  height: 61px;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #8c9994;
+}
+
+.step {
+  color: #555;
+  background-color: #ddd;
+}
+
+.step.active {
+  color: #fff;
+  background-color: #4caf50;
+}
+
+.step.filled {
+  color: #fff;
+  /* background-color: #007bff; */
+  background-color: rgb(67, 79, 94);
+}
+
+.step.unfilled {
+  color: #e31919;
+  background-color: #ddd;
+}
+
+.form-items-tab-container {
+  display: flex;
+  gap: 3rem;
+}
+
+.title-step-container {
+  /* border: 1px solid black; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+#regForm {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 8px; */
+
+  /* margin: 100px auto; */
+  padding: 40px;
+  width: 80vw;
+  /* height: 400px; */
+  /* border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px, rgba(0, 0, 0, 0.3) 0px 2px 2px -3px, rgba(0, 0, 0, 0.2) 0px 2px 0px inset;
+  /* padding: 18px 15px 18px 15px; */
+  /* background-color: rgb(185, 185, 185); */
+  /* background: rgb(101,100,107); */
+  background: #6e858610;
+  /* background: rgb(214, 214, 214); */
+  /* background: linear-gradient(90deg, rgba(209,208,221,1) 0%, rgba(255,255,255,1) 100%, rgba(3,3,3,0.45171572046787467) 100%); */
+
+}
+
+.bottom-section-container {
+
+  /* border: 1px solid black; */
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  /* background-color: #6e858683; */
+
+
+
+}
+
+.purposeandnature {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  color: black;
+  font-weight: 500;
+}
+
+
+#discussionForm {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 2px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+  background-color: #6e858610;
+  /* border: 2px solid green; */
+  height: 100%;
+}
+
+
+#releaseForm {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 2px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+  background-color: #6e858610;
+  /* border: 2px solid green; */
+  height: 100%;
+  padding: 10px 15px 5px 15px;
+}
+
+
+.navbar-vertical.navbar-card .navbar-collapse, .navbar-vertical.navbar-card .navbar-vertical-content, .navbar-vertical.navbar-vibrant .navbar-collapse, .navbar-vertical.navbar-vibrant .navbar-vertical-content, .navbar-vertical.navbar-inverted .navbar-collapse, .navbar-vertical.navbar-inverted .navbar-vertical-content {
+  max-height: 100vh !important;
+}
+
+
+
+/* Style for not selected labels within the specific .btn-group */
+.btn-group input[type="radio"]:not(:checked) + label.btn.btn-secondary {
+  background-color: #f0f0f0; /* Change this to your desired background color */
+  color: #333; /* Change this to your desired text color */
+}
+
+/* Style for selected labels within the specific .btn-group */
+.btn-group input[type="radio"]:checked + label.btn.btn-secondary {
+  background-color: #007bff; /* Change this to your desired background color */
+  color: #fff; /* Change this to your desired text color */
+}
+
+.larger-checkbox input[type="checkbox"] {
+  width: 20px; /* Adjust the width as needed */
+  height: 20px; /* Adjust the height as needed */
+}
